@@ -1,0 +1,579 @@
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+
+body {
+	 font-family: Lato, Gotham, Arial;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li div {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+ul li .zero-left {
+    position: relative;
+    color: #EB908B;
+    width: 30%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+ul li .zero-right {
+    border-left: 3px solid #3C4C4C;
+    position: relative;
+    color: #3C4C4C;
+    width: 70%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+ul li .first {
+    position: relative;
+    color: #EB908B;
+    width: 30%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+ul li .second {
+    border-left: 3px solid #3C4C4C;
+    position: relative;
+    width: 70%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+ul li .second p {
+    color: #EB908B;
+    position: relative;
+    text-align: left;
+}
+
+ul li .first::before {
+    content: '';
+    position: absolute;
+    right: -11.5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 150%;
+    border: 2px solid #3C4C4C;
+    background: #3C4C4C;
+    z-index:9999
+}
+
+ul li .first::after {
+      content: '';
+    position: absolute;
+    bottom: 16px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: inherit;
+}
+
+.tabs {
+	 position: relative;
+}
+ .tabs li {
+	 float: left;
+	 width: 50%;
+	 display: block;
+}
+ .tabs input[type="radio"] {
+	 display: none;
+}
+ .tabs label {
+	 display: block;
+	 padding: 25px 0;
+	 font-weight: normal;
+	 text-transform: uppercase;
+	 text-align: center;
+	 background: #d9d9d6;
+	 color: #707372;
+	 cursor: pointer;
+	 position: relative;
+}
+ .tabs label:hover {
+	 background: #7ccbea;
+	 color: #fff;
+}
+ .tabs label span {
+	 display: block;
+	 font-size: 2em;
+	 line-height: 1;
+	 font-weight: 600;
+}
+ .tabs .tab-content {
+	 z-index: 2;
+	 display: none;
+	 overflow: hidden;
+	 width: 100%;
+	 font-size: 17px;
+	 line-height: 25px;
+	 padding: 5px;
+	 position: absolute;
+	 top: 184px;
+	 left: 0;
+	 background: #fff;
+}
+
+ .tabs [id^="tab"]:checked + label {
+	 background: #007aff;
+	 color: #fff;
+}
+ .tabs [id^="tab"]:checked + label:after {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: calc(50% - 20px);
+	 border: 20px solid transparent;
+	 border-bottom-color: #fff;
+}
+ .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+	 display: block;
+}
+  
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+	border-right: 3px solid #e5ecf4;
+}
+
+table td:last-child{
+  border-right: none;
+}
+
+ tr:nth-of-type(even) {
+	 background-color: #fff;
+}
+ tr:first-of-type {
+	 padding-top: 20px;
+}
+ td {
+	 border: 0;
+	 width: 95%;
+	 vertical-align: top;
+	 padding: 15px;
+}
+
+ .session-title {
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 padding: 0px;
+	 font-size: 1.25rem;
+	 color: #000000;
+}
+ .session-description {
+	 display: block;
+	 padding: 10px 0px 0px 24px;
+}
+
+ .author {
+	 font-size: 12px;
+	 color: #000000;
+	 text-align:right;
+	 font-weight: none;
+	 text-transform: none;
+}
+
+.hour {
+	font-size: 1.25rem;
+	color: #098dcf;
+    width: 10%;
+	 text-align: right;
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 vertical-align: top;
+}
+
+.circle {
+	height:19px;
+	width:19px;
+	left:-26px;
+	top:0px;
+	position:relative;
+}
+
+.position {
+	height:20px;
+	width:20px;
+}
+
+ .stage-earth {
+	 background-color: #ffa726;
+}
+ .stage-vert {
+	 //background-color: #9ccc65;
+	 background-color: #FFFFFF;
+}
+ .stage-rose {
+	 //background-color: #fbe2d1;
+	 background-color: #f16322;
+}
+ .stage-bleu {
+	 //background-color: #b3e5fc;
+	 background-color: #1fc3f3;
+}
+ .stage-jupiter {
+	 background-color: #81d4fa;
+}
+ .stage-saturn {
+	 background-color: #26c6da;
+}
+
+</style>
+</head>
+<body>
+<ul class="tabs">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked />
+				<label for="tab1">Jeudi<span>30 NOVEMBRE</span></label>
+        <div id="tab-content1" class="tab-content">
+		<table>
+			<tr>
+				<td class="hour">15:30
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Accueil</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+					<span><br/></span>
+					<span class="session-description">Village des partenaires et Cité des savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">16:30
+					<p></p>
+				</td>
+				<td class="stage-vert">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Ouverture</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">17:05
+					<p></p>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Isabelle_Delannoy.png"/>
+					<p class="author">Isabelle Delannoy</p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Session plenière - Keynote Speaker</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+						Passer à une économie symbiotique : une économie régénérative de la planète, de l'humain et de la société. 
+						Des entreprises et des territoires montrent que nous pouvons enclencher une nouvelle ère où l’humain ne détruit pas pour prospérer mais au contraire régénère la fertilité du milieu dont il dépend.
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">18:05
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Break</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">18:15
+					<p></p>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Gilles_Babinet.png"/>
+					<p class="author">Gilles Babinet</p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Session plenière - Keynote Speaker</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+						Machine learning et environnement. Mettre le numérique au service de la transition.
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">19:15
+					<p></p>
+				</td>
+				<td class="stage-vert">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Projets et Talents</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">Finale : Présentation des 5 pitchs finalistes</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">19:55
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Conclusion</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">20:15
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Cocktail dinatoire</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin - Rez-de-chaussée</span>
+					<span><br/></span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">22:00
+					<p></p>
+				</td>
+				<td>
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Fin de la journée 1</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+<li>
+	<input type="radio" name="tabs" id="tab2" />
+			<label for="tab2">VENDREDI<span>1er DECEMBRE</span></label>
+	<div id="tab-content2" class="tab-content">
+		<table>
+			<tr>
+				<td class="hour">08:00
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Accueil</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+					<span><br/></span>
+					<span class="session-description">Village des partenaires et Cité des savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">09:00
+					<p></p>
+				</td>
+				<td class="stage-vert">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Ouverture</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">09:45
+					<p></p>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Nicolas_Felger.png"/>
+					<p class="author">Nicolas Felger</p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Session plenière - Keynote Speaker</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+						Change experience.
+						Le show qui va changer vos collaborateurs.
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">11:00
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Break</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">11:15
+					<p></p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">12:00
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Cocktail déjeunatoire</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin - Rez-de-chaussée</span>
+					<span><br/></span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">13:10
+					<p></p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">13:55
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Break</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">14:05
+					<p></p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">14:50
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Break</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">15:15
+					<p></p>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Marc_Lievremont.png"/>
+					<p class="author">Marc Lièvremont</p>
+				</td>
+				<td class="stage-rose">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Session plenière - Keynote Speaker</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">
+						Le rugby, un modèle d'organisation, de management et de performance. 
+						En cette année de Coupe du Monde de Rugby, quels sont les points communs qui lient les valeurs du Rugby à celles du monde professionnel ?
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">16:20
+					<p></p>
+				</td>
+				<td class="stage-vert">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Projets et Talents</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span><br/></span>
+					<span class="session-description">Résultats</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">16:35
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Conclusion</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">17:00
+					<p></p>
+				</td>
+				<td class="stage-bleu">
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Clôture</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+				</td>
+			</tr>
+				<tr>
+				<td class="hour">18:00
+					<p></p>
+				</td>
+				<td>
+					<img class="circle" src="images/circle.png"/>
+					<span class="session-title">Fin de la journée 2</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Amphitéâtre Richelieu</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+</body>
+</html>
