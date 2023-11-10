@@ -75,7 +75,7 @@ ul li .first::before {
 }
 
 ul li .first::after {
-      content: '';
+    content: '';
     position: absolute;
     bottom: 16px;
     right: -6px;
@@ -194,6 +194,14 @@ table td:last-child{
 	 text-transform: none;
 }
 
+ .author_right {
+	 font-size: 12px;
+	 color: #000000;
+	 text-align:left;
+	 font-weight: none;
+	 text-transform: none;
+}
+
 .hour {
 	font-size: 1.25rem;
 	color: #098dcf;
@@ -269,8 +277,6 @@ table td:last-child{
 					<span class="session-title">Ouverture</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
-					<span><br/></span>
-					<span class="session-description"></span>
 				</td>
 			</tr>
 			<tr>
@@ -298,9 +304,9 @@ table td:last-child{
 				<td class="stage-bleu">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Break</span>
-					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
-					Salle Mazarin</span>
+					Salle Mazarin</span><br/>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 				</td>
 			</tr>
 			<tr>
@@ -339,9 +345,9 @@ table td:last-child{
 				</td>
 				<td class="stage-bleu">
 					<img class="circle" src="images/circle.png"/>
-					<span class="session-title">Conclusion</span>
+					<span class="session-title">Conclusion</span><br/>
 					<span class="session-description"><img class="position" src="images/position.png"/>
-					Salle Mazarin</span>
+					Salle Mazarin</span><br/>
 					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 				</td>
 			</tr>
@@ -378,7 +384,7 @@ table td:last-child{
 			<tr>
 				<td class="hour">08:00
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Accueil</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -391,13 +397,11 @@ table td:last-child{
 				<td class="hour">09:00
 					<p></p>
 				</td>
-				<td class="stage-vert">
+				<td class="stage-vert" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Ouverture</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
-					<span><br/></span>
-					<span class="session-description"></span>
 				</td>
 			</tr>
 			<tr>
@@ -406,7 +410,7 @@ table td:last-child{
 					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Nicolas_Felger.png"/>
 					<p class="author">Nicolas Felger</p>
 				</td>
-				<td class="stage-rose">
+				<td class="stage-rose" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Session plenière - Keynote Speaker</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -422,33 +426,74 @@ table td:last-child{
 				<td class="hour">11:00
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Break</span>
-					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
-					Salle Mazarin</span>
+					Salle Mazarin</span><br/>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">11:15
 					<p></p>
 				</td>
-				<td class="stage-rose">
+				<td class="stage-rose" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<hr/>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">
+					<p></p>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 1</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
 					<span><br/></span>
-					<span class="session-description">
-					</span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Lamarre.png"/>
+					<p><b>Laurent MENGUAL & Patricia LAMARRE</b></p><br/><br/>
+					Thème: Humain<br/><br/>
+					<span style="vertical-align:top;">Est-ce que les projets seront plus faciles à conduire demain qu’ aujourd’hui ?</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 2</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Condé</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Tannguy.png"/>
+					<p><b>Tannguy LE DANTEC & Patrice SCHOCH</b></p><br/><br/>
+					Thème: Environnement<br/><br/>
+					<span style="vertical-align:top;">Management de projet à impact : Utopie ou Réalité ?</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 3</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Colbert</span>
+					<span><br/></span>
+					<!-- <img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Danna.png"/> /-->
+					<p><b>Lionel APOSTOLO</b></p><br/><br/><br/><br/>
+					Thème: Sciences<br/><br/>
+					<span style="vertical-align:top;">AsSystem</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 4</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Lulli</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Danna.png"/>
+					<p><b>Benoit DESRENTES</b></p><br/><br/><br/>
+					Thème: Humain<br/><br/>
+					<span style="vertical-align:top;">Ne me parlez plus de gestion des ressources, sauf si …</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">12:00
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Cocktail déjeunatoire</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -461,49 +506,133 @@ table td:last-child{
 				<td class="hour">13:10
 					<p></p>
 				</td>
-				<td class="stage-rose">
+				<td class="stage-rose" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<hr/>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">
+					<p></p>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 1</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
 					<span><br/></span>
-					<span class="session-description">
-					</span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Fornari.png"/>
+					<p><b>Laurence FORNARI</b></p><br/><br/><br/><br/>
+					Thème: Environnement<br/><br/>
+					<span style="vertical-align:top;">L’intelligence artificielle va-t-elle tuer l’innovation et ne laisser aucune place à l'humain, et notamment à la femme ?</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 2</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Condé</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Ozoux.png"/>
+					<p><b>Jean-Luc OZOUX</b></p><br/><br/><br/><br/><br/>
+					Thème: Sciences/Environnement<br/><br/>
+					<span style="vertical-align:top;">De l’automatisation à l’autonomie : les solutions digitales pour réaliser les grands projets industriels</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 3</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Colbert</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Perocheau.png"/>
+					<p><b>Guillaume PEROCHEAU & Jean-Philippe PIERRE</b></p><br/><br/>
+					Thème: Humain<br/><br/>
+					<span style="vertical-align:top;">Imaginer des projets de l’espace sûr et juste</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 4</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Lulli</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Desrentes.png"/>
+					<p><b>Marjorie DANNA & Aude MILESI</b></p><br/><br/><br/><br/>
+					Thème: Environnement<br/><br/>
+					<span style="vertical-align:top;">CONF’Expérience «PASSAGEs»</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">13:55
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Break</span>
-					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
-					Salle Mazarin</span>
+					Salle Mazarin</span><br/>
+					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">14:05
 					<p></p>
 				</td>
-				<td class="stage-rose">
+				<td class="stage-rose" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Conférence au choix parmi 4 sujets</span>
+					<hr/>
+				</td>
+			</tr>
+			<tr>
+				<td class="hour">
+					<p></p>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Table ronde</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Colbert</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Table_ronde.png"/>
+					<p><b>Amélie ROUVIN, Alice PEYRARD, Suzanne REYNDERS et Hervé DUMAS</b></p><br/>
+					Thème: Environnement<br/><br/>
+					<span style="vertical-align:top;">Comment agir pour ne pas subir la sobriété : de la contrainte à un atout pour les projets !</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 2</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
 					<span><br/></span>
-					<span class="session-description">
-					</span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Sgaros.png"/>
+					<p><b>Paul TAP & Alexis SGAROS</b></p><br/><br/><br/><br/>
+					Thème: Humain<br/><br/>
+					<span style="vertical-align:top;">Déclencher une coopération efficace avec la Théorie des Contraintes (TOC)</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 3</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Condé</span>
+					<span><br/></span>
+					<img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Sameh_Alejandro.png"/>
+					<p><b>Sameh MTIBAA & Alejandro ROMERO-TORRES</b></p><br/><br/>
+					Thème: Sciences<br/><br/>
+					<span style="vertical-align:top;">Booster la compétence des jeunes en management de projet</span>
+				</td>
+				<td class="stage-rose" style="width:20%" colspan="1">
+					<span class="session-title">Conférence 4</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Lulli</span>
+					<span><br/></span>
+					<!-- <img style="border-radius: 50%;height: 90px;width:90px;margin: 0px 10px 0px 0px;float:left" src="speakers/Desrentes.png"/> -->
+					<p><b>Antoine Delugeau & Cyril Verbugghe</b></p><br/><br/><br/><br/>
+					Thème: Humain<br/><br/>
+					<span style="vertical-align:top;">Offolio & Scalian</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">14:50
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Break</span>
+					<span class="session-description"><img class="position" src="images/position.png"/>
+					Salle Mazarin</span><br/>
 					<span class="session-description">Village des partenaires et Cité des Savoirs</span>
 				</td>
 			</tr>
@@ -513,7 +642,7 @@ table td:last-child{
 					<img style="border-radius: 50%;height: 90px;width:90px;margin: 10px 0 10px 0px;" src="speakers/Marc_Lievremont.png"/>
 					<p class="author">Marc Lièvremont</p>
 				</td>
-				<td class="stage-rose">
+				<td class="stage-rose" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Session plenière - Keynote Speaker</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -529,20 +658,20 @@ table td:last-child{
 				<td class="hour">16:20
 					<p></p>
 				</td>
-				<td class="stage-vert">
+				<td class="stage-vert" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Projets et Talents</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
 					Amphitéâtre Richelieu</span>
 					<span><br/></span>
-					<span class="session-description">Résultats</span>
+					<span class="session-description">Résultats de la finale</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="hour">16:35
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Conclusion</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -554,7 +683,7 @@ table td:last-child{
 				<td class="hour">17:00
 					<p></p>
 				</td>
-				<td class="stage-bleu">
+				<td class="stage-bleu" colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Clôture</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
@@ -565,7 +694,7 @@ table td:last-child{
 				<td class="hour">18:00
 					<p></p>
 				</td>
-				<td>
+				<td colspan="4">
 					<img class="circle" src="images/circle.png"/>
 					<span class="session-title">Fin de la journée 2</span>
 					<span class="session-description"><img class="position" src="images/position.png"/>
